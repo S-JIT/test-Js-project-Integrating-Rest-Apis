@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Header</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Your Blog</h1>
+        <h2 id="totalBlogCount">Total Blogs: 0</h2> <!-- Display total blog count -->
+        <div id="blogList"></div> <!-- Container to display blogs -->
+        <form id="blogForm" onsubmit="postBlog(event)" autocomplete="off">
+            <label for="imageUrl">Image URL:</label>
+            <input type="text" id="imageUrl" name="imageUrl" required><br><br>
+            <label for="blogTitle">Title:</label>
+            <input type="text" id="blogTitle" name="blogTitle" required><br><br>
+            <label for="blogDescription">Blog Description:</label><br>
+            <textarea id="blogDescription" name="blogDescription" rows="4" cols="50" required></textarea><br><br>
+            <button type="submit">Post Blog</button>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
